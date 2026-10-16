@@ -1,13 +1,14 @@
-# <img src="https://api.iconify.design/tabler/spray.svg?color=%23FF1FCB" width="30"/> Neon Graffiti Colorizer
+# <img src="https://api.iconify.design/tabler/spray.svg?color=%23FF1FCB" width="30"/> Neon Graffiti
 
-Turns grayscale and black-and-white images into neon graffiti art, pixel by pixel. No AI, just image processing. Black linework is never touched, and the output keeps the exact resolution of the input.
+Turns grayscale and black-and-white images into deep neon street-art paintings using classic image processing. No AI, no trained models. Black linework is preserved, and the output retains the original image dimensions.
+
+Upload an image, customize the available settings, and compare the original and neon-colored result with an interactive before-and-after slider.
 
 ## <img src="https://api.iconify.design/tabler/photo.svg?color=%233CCBEA" width="22"/> Before / After
 
 | Before | After |
 |:---:|:---:|
-| <img src="1.jpg" width="420"/> | <img src="1_neon.png" width="420"/> |
-| <img src="2.jpg" width="420"/> | <img src="2_neon.png" width="420"/> |
+| <img src="example/1.jpg" width="420"/> | <img src="example/1_neon.png" width="420"/> |
 
 ## <img src="https://api.iconify.design/tabler/palette.svg?color=%23CC14FF" width="22"/> Colors
 
@@ -22,28 +23,26 @@ Turns grayscale and black-and-white images into neon graffiti art, pixel by pixe
 ![](https://img.shields.io/badge/1ECFA0-1ECFA0?style=flat-square)
 ![](https://img.shields.io/badge/F7E51C-F7E51C?style=flat-square)
 
-## <img src="https://api.iconify.design/tabler/rocket.svg?color=%23F7E51C" width="22"/> Quick Start
-
-```bash
-pip install numpy pillow scipy
-python neon_graffiti_colorizer.py input.jpg
-```
-
-The result is saved as `input_neon.png`.
-
-| Option | Effect |
-|---|---|
-| `-o out.png` | Custom output name |
-| `--seed 42` | Different color layout |
-| `--black 20` | Color more of the dark areas |
-| `--gradient 0` | Flat fills, no fades |
-| `--bg none` | Color the background neon too |
-
 ## <img src="https://api.iconify.design/tabler/settings.svg?color=%231ECFA0" width="22"/> How It Works
 
-1. <img src="https://api.iconify.design/tabler/pencil.svg?color=%23FF1FCB" width="16"/> **Detect outlines:** near-black pixels, adaptive dark strokes, and Sobel edges.
-2. <img src="https://api.iconify.design/tabler/wall.svg?color=%23E040FB" width="16"/> **Close gaps:** broken outlines are sealed so color can't leak.
-3. <img src="https://api.iconify.design/tabler/puzzle.svg?color=%23CC14FF" width="16"/> **Find shapes:** connected-component labelling splits the image into regions.
-4. <img src="https://api.iconify.design/tabler/target.svg?color=%235B2BFF" width="16"/> **Assign colors:** graph coloring ensures neighboring shapes never share a color.
-5. <img src="https://api.iconify.design/tabler/brush.svg?color=%233CCBEA" width="16"/> **Paint:** solid fills with subtle fades; textured areas get neon gradient maps.
-6. <img src="https://api.iconify.design/tabler/shield.svg?color=%231ECFA0" width="16"/> **Protect black:** near-black pixels are copied from the original unchanged.
+1. <img src="https://api.iconify.design/tabler/pencil.svg?color=%23FF1FCB" width="16"/> **Detect outlines:** Identifies dark linework and image edges using classic image-processing techniques.
+2. <img src="https://api.iconify.design/tabler/wall.svg?color=%23E040FB" width="16"/> **Close gaps:** Seals small gaps in outlines to reduce color leakage.
+3. <img src="https://api.iconify.design/tabler/puzzle.svg?color=%23CC14FF" width="16"/> **Find shapes:** Uses connected-component labeling to identify separate image regions.
+4. <img src="https://api.iconify.design/tabler/target.svg?color=%235B2BFF" width="16"/> **Assign colors:** Distributes neon colors across regions for a varied composition.
+5. <img src="https://api.iconify.design/tabler/brush.svg?color=%233CCBEA" width="16"/> **Paint:** Applies color fills and gradients to create the neon street-art effect.
+6. <img src="https://api.iconify.design/tabler/shield.svg?color=%231ECFA0" width="16"/> **Protect black:** Preserves dark linework to maintain the original illustration's definition.
+
+## <img src="https://api.iconify.design/tabler/device-gamepad-2.svg?color=%23FF1FCB" width="22"/> Spray Defender
+
+A retro arcade shooter built into the website, featuring marching enemy formations, diving enemies, destructible bunkers, power-ups, boss encounters, synthesized chiptune audio, and browser-saved high scores.
+
+Play using the keyboard, on-screen touch controls, or a compatible gamepad.
+
+## <img src="https://api.iconify.design/tabler/code.svg?color=%233CCBEA" width="22"/> Tech Stack
+
+- **Python:** Image-processing backend and utilities.
+- **NumPy, SciPy, Pillow:** Pixel manipulation and image processing.
+- **JavaScript, HTML, CSS:** Website interface and interactions.
+- **Swiper:** Hero carousel.
+- **img-comparison-slider:** Before-and-after comparison.
+- **Canvas API and Web Audio API:** Arcade game rendering and audio.
