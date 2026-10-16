@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Neon Graffiti</title>
+  <meta name="description" content="Upload a black and white image and get it back painted as neon street art. Same resolution, outlines untouched, no AI.">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="alternate icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Neon Graffiti">
+  <meta property="og:description" content="Black and white in. Street art out.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#studio">Skip to the studio</a>
+
+  <!-- custom SVG symbols used across the page -->
+  <svg width="0" height="0" class="sr-only" aria-hidden="true">
+    <symbol id="i-up" viewBox="0 0 16 16"><path d="M3.5 10.5 8 6l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 16 16"><path d="M3.5 5.5 8 10l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-prev" viewBox="0 0 24 24"><path d="M20 12H4m0 0 6-6m-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-next" viewBox="0 0 24 24"><path d="M4 12h16m0 0-6-6m6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></symbol>
+  </svg>
+
+  <header class="nav glass">
+    <a class="brand" href="#top" aria-label="Neon Graffiti, back to top">
+      <img src="/favicon.svg" alt="" width="28" height="28">
+      <span>Neon Graffiti</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#studio">Studio</a>
+      <a href="#arcade">Play</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" aria-label="Street art from around the world">
+      <div class="swiper hero-swiper" id="heroSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-credit="Jason Dent" data-href="https://unsplash.com/photos/black-and-multicolored-graffiti-art-v5OiDiqIj-M">
+            <img class="photo" fetchpriority="high" alt="Graffiti lettering covering a wall" data-id="1565476599063-a9b93037c7f0" src="https://images.unsplash.com/photo-1565476599063-a9b93037c7f0?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1600" srcset="https://images.unsplash.com/photo-1565476599063-a9b93037c7f0?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=800 800w, https://images.unsplash.com/photo-1565476599063-a9b93037c7f0?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1400 1400w, https://images.unsplash.com/photo-1565476599063-a9b93037c7f0?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2000 2000w, https://images.unsplash.com/photo-1565476599063-a9b93037c7f0?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2800 2800w" sizes="100vw" decoding="async">
+          </div>
+          <div class="swiper-slide" data-credit="Florian Olivo" data-href="https://unsplash.com/photos/graffiti-wall-8Jveqo68d7E">
+            <img class="photo" loading="lazy" alt="A long wall painted with graffiti" data-id="1547417584-12db672469b6" src="https://images.unsplash.com/photo-1547417584-12db672469b6?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1600" srcset="https://images.unsplash.com/photo-1547417584-12db672469b6?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=800 800w, https://images.unsplash.com/photo-1547417584-12db672469b6?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1400 1400w, https://images.unsplash.com/photo-1547417584-12db672469b6?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2000 2000w, https://images.unsplash.com/photo-1547417584-12db672469b6?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2800 2800w" sizes="100vw" decoding="async">
+          </div>
+          <div class="swiper-slide" data-credit="Jared Murray" data-href="https://unsplash.com/photos/a-black-and-white-photo-of-a-building-with-graffiti-on-it-GXZ-W2__ebM">
+            <img class="photo" loading="lazy" alt="A building covered in graffiti" data-id="1641604901764-9e1dca1ceceb" src="https://images.unsplash.com/photo-1641604901764-9e1dca1ceceb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1600" srcset="https://images.unsplash.com/photo-1641604901764-9e1dca1ceceb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=800 800w, https://images.unsplash.com/photo-1641604901764-9e1dca1ceceb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1400 1400w, https://images.unsplash.com/photo-1641604901764-9e1dca1ceceb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2000 2000w, https://images.unsplash.com/photo-1641604901764-9e1dca1ceceb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2800 2800w" sizes="100vw" decoding="async">
+          </div>
+          <div class="swiper-slide" data-credit="Denis Volkov" data-href="https://unsplash.com/photos/a-wall-covered-in-graffiti-next-to-a-street-light-UhTxIcIuPwY">
+            <img class="photo" loading="lazy" alt="A graffiti wall beside a street light" data-id="1686858562352-952f0416eab4" src="https://images.unsplash.com/photo-1686858562352-952f0416eab4?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1600" srcset="https://images.unsplash.com/photo-1686858562352-952f0416eab4?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=800 800w, https://images.unsplash.com/photo-1686858562352-952f0416eab4?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1400 1400w, https://images.unsplash.com/photo-1686858562352-952f0416eab4?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2000 2000w, https://images.unsplash.com/photo-1686858562352-952f0416eab4?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2800 2800w" sizes="100vw" decoding="async">
+          </div>
+          <div class="swiper-slide" data-credit="Patrick Robert Doyle" data-href="https://unsplash.com/photos/man-standing-front-of-graffiti-wall-0cARrVYKjOc">
+            <img class="photo" loading="lazy" alt="A person standing in front of a graffiti wall" data-id="1568063669868-43b840f496cb" src="https://images.unsplash.com/photo-1568063669868-43b840f496cb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1600" srcset="https://images.unsplash.com/photo-1568063669868-43b840f496cb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=800 800w, https://images.unsplash.com/photo-1568063669868-43b840f496cb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1400 1400w, https://images.unsplash.com/photo-1568063669868-43b840f496cb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2000 2000w, https://images.unsplash.com/photo-1568063669868-43b840f496cb?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2800 2800w" sizes="100vw" decoding="async">
+          </div>
+          <div class="swiper-slide" data-credit="Diogo Fagundes" data-href="https://unsplash.com/photos/black-red-and-white-graffiti-K0cW669UQH0">
+            <img class="photo" loading="lazy" alt="Close-up of a graffiti piece" data-id="1611562242695-cc5940964622" src="https://images.unsplash.com/photo-1611562242695-cc5940964622?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1600" srcset="https://images.unsplash.com/photo-1611562242695-cc5940964622?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=800 800w, https://images.unsplash.com/photo-1611562242695-cc5940964622?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1400 1400w, https://images.unsplash.com/photo-1611562242695-cc5940964622?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2000 2000w, https://images.unsplash.com/photo-1611562242695-cc5940964622?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2800 2800w" sizes="100vw" decoding="async">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-shade" aria-hidden="true"></div>
+
+      <div class="hero-card glass">
+        <h1><span>Turn black &amp; white</span> <em>into street&nbsp;art.</em></h1>
+        <p>Upload a sketch, line drawing or photo. Every shape comes back painted in deep neon, at full resolution.</p>
+      </div>
+
+      <div class="hero-controls glass">
+        <button type="button" class="round-btn" id="heroPrev" aria-label="Previous photo"><svg width="20" height="20"><use href="#i-prev"/></svg></button>
+        <span class="counter" aria-live="polite"><b id="slideNow">01</b><span>/</span><span id="slideAll">06</span></span>
+        <button type="button" class="round-btn" id="heroNext" aria-label="Next photo"><svg width="20" height="20"><use href="#i-next"/></svg></button>
+        <a class="credit" id="credit" href="#" target="_blank" rel="noopener">Photo: Jason Dent</a>
+      </div>
+
+      <div class="hero-progress" aria-hidden="true"><span id="heroBar"></span></div>
+    </section>
+
+    <!-- ============================== STUDIO ============================== -->
+    <section class="studio" id="studio" aria-labelledby="studio-title">
+      <figure class="backdrop" aria-hidden="true">
+        <img class="backdrop-img" loading="lazy" alt="" data-id="1728219686377-509f37ff9cb9" data-w="2000" src="https://images.unsplash.com/photo-1728219686377-509f37ff9cb9?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1600" srcset="https://images.unsplash.com/photo-1728219686377-509f37ff9cb9?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=800 800w, https://images.unsplash.com/photo-1728219686377-509f37ff9cb9?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=1400 1400w, https://images.unsplash.com/photo-1728219686377-509f37ff9cb9?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2000 2000w, https://images.unsplash.com/photo-1728219686377-509f37ff9cb9?auto=format&amp;fit=crop&amp;q=80&amp;sat=-100&amp;con=10&amp;w=2800 2800w" sizes="100vw" decoding="async">
+        <h2 id="studio-title">Studio</h2>
+      </figure>
+
+      <div class="studio-grid">
+        <form class="panel glass" id="paintForm" novalidate>
+          <label class="drop" id="drop" for="fileInput">
+            <input type="file" id="fileInput" accept="image/*" class="sr-only">
+            <i class="fa-solid fa-arrow-up-from-bracket drop-icon" aria-hidden="true"></i>
+            <span class="drop-title">Drop an image here</span>
+            <span class="btn btn-glass btn-sm"><span>Select image</span></span>
+          </label>
+
+          <div class="file-card" id="fileCard" hidden>
+            <img id="thumb" alt="">
+            <div class="file-meta">
+              <strong id="fileName">image.png</strong>
+              <span id="fileInfo"></span>
+            </div>
+            <button type="button" class="round-btn small" id="clearFile" aria-label="Remove image"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+          </div>
+
+          <fieldset class="field">
+            <legend>Style</legend>
+            <div class="segmented">
+              <label><input type="radio" name="style" value="flat" checked><span>Flat spray</span></label>
+              <label><input type="radio" name="style" value="auto"><span>Photo gradients</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field">
+            <legend>Background</legend>
+            <div class="segmented">
+              <label><input type="radio" name="bg" value="auto" checked><span>Indigo night</span></label>
+              <label><input type="radio" name="bg" value="none"><span>Full neon</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field">
+            <label for="seed">Colour layout</label>
+            <div class="seed-row">
+              <div class="stepper">
+                <input type="number" id="seed" min="0" max="999999" value="7" inputmode="numeric">
+                <div class="steps">
+                  <button type="button" data-step="1" aria-label="Next layout" tabindex="-1"><svg width="14" height="14"><use href="#i-up"/></svg></button>
+                  <button type="button" data-step="-1" aria-label="Previous layout" tabindex="-1"><svg width="14" height="14"><use href="#i-down"/></svg></button>
+                </div>
+              </div>
+              <button type="button" class="round-btn" id="remix" aria-label="Random layout"><i class="fa-solid fa-shuffle" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="depth" class="label-row"><span>Shadow depth</span><output id="depthOut">0.70</output></label>
+            <input type="range" id="depth" min="0" max="1.2" step="0.05" value="0.7">
+          </div>
+
+          <div class="field">
+            <label for="saturation" class="label-row"><span>Saturation</span><output id="satOut">1.15</output></label>
+            <input type="range" id="saturation" min="1" max="1.6" step="0.05" value="1.15">
+          </div>
+
+          <button type="submit" class="btn btn-red btn-lg" id="paintBtn" disabled><span>Paint</span></button>
+          <button type="button" class="text-btn" id="useSample">Try a sample image</button>
+        </form>
+
+        <div class="panel glass output" aria-live="polite">
+          <div class="stage" id="stage" data-state="empty">
+            <div class="empty"><p>Your painted image appears here.</p></div>
+
+            <div class="working">
+              <img id="workingImg" alt="">
+              <span class="scanline loop" aria-hidden="true"></span>
+              <p class="working-label" id="workingText">Painting</p>
+            </div>
+
+            <div class="result">
+              <div class="compare" data-compare="out">
+                <img-comparison-slider class="slider" id="outSlider" value="0" tabindex="0">
+                  <img slot="first" id="beforeImg" alt="Your original image">
+                  <img slot="second" id="afterImg" alt="Your image painted in neon">
+                  <span slot="handle" class="handle" aria-hidden="true"><svg width="12" height="12"><use href="#i-left"/></svg><svg width="12" height="12"><use href="#i-right"/></svg></span>
+                </img-comparison-slider>
+                <div class="reveal" aria-hidden="true">
+                  <img id="revealImg" alt="">
+                  <span class="scanline"></span>
+                </div>
+                <span class="tag tag-before">Before</span>
+                <span class="tag tag-after">After</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="out-bar" id="outBar" hidden>
+            <span class="out-meta" id="outMeta"></span>
+            <div class="out-actions">
+              <button type="button" class="btn btn-glass btn-sm" id="repaint"><i class="fa-solid fa-shuffle" aria-hidden="true"></i><span>New colours</span></button>
+              <a class="btn btn-red btn-sm" id="download" download><i class="fa-solid fa-download" aria-hidden="true"></i><span>Download</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== ARCADE ============================== -->
+    <section class="arcade" id="arcade" aria-labelledby="arcade-title">
+      <h2 id="arcade-title">While it dries</h2>
+      <div class="cabinet glass">
+        <div class="screen" id="screen">
+          <canvas id="game" width="256" height="192" tabindex="0" aria-label="Spray Defender, a pixel space shooter. Press Enter to start."></canvas>
+          <div class="crt" aria-hidden="true"></div>
+        </div>
+        <div class="cab-bar">
+          <p class="keys"><kbd>&larr;</kbd><kbd>&rarr;</kbd> move <kbd>Space</kbd> fire <kbd>P</kbd> pause</p>
+          <div class="cab-actions">
+            <button type="button" class="round-btn" id="muteBtn" aria-label="Mute sound" aria-pressed="false"><i class="fa-solid fa-volume-high" aria-hidden="true"></i></button>
+            <button type="button" class="round-btn" id="fsBtn" aria-label="Full screen"><i class="fa-solid fa-expand" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <div class="touchpad" id="touchpad">
+          <div class="dpad">
+            <button type="button" data-key="left" aria-label="Move left"><svg width="26" height="26"><use href="#i-left"/></svg></button>
+            <button type="button" data-key="right" aria-label="Move right"><svg width="26" height="26"><use href="#i-right"/></svg></button>
+          </div>
+          <button type="button" class="fire" data-key="fire" aria-label="Fire">Fire</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="brand-word">Neon Graffiti</span>
+    <span>Photos from <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+  </footer>
+
+  <div class="toast glass" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/game.js" defer></script>
+</body>
+</html>
